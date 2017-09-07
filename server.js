@@ -76,4 +76,4 @@ app.get( '/lookup/', (req, res) => {
 } );
 
 // Start listening!
-app.listen( process.env.TW_PORT );
+app.listen( process.env.PORT );
