@@ -1,0 +1,6 @@
+{
+  "name": "twitlytics-server",
+  "description": "A simple NodeJS API which receives a t.co referrer link, and traces it back to the user and tweet.",
+  "repository": "https://github.com/SimonJThompson/twitlytics-server",
+  "keywords": ["node", "express", "twitter", "twitlytics", "analytics"]
+}
