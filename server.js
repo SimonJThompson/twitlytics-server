@@ -26,8 +26,8 @@ if( !fs.existsSync( './cache/' ) ) fs.mkdirSync( './cache/' );
 app.get( '/lookup/', (req, res) => {
 
 	// Always send CORS headers
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	res.header( 'Access-Control-Allow-Origin', '*' );
+	res.header( 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept' );
 
 	if( ! req.query.referrer ) return res.json( {status: 'error'} );
 
