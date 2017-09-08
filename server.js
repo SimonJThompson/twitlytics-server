@@ -25,6 +25,10 @@ if( !fs.existsSync( './cache/' ) ) fs.mkdirSync( './cache/' );
  */
 app.get( '/lookup/', (req, res) => {
 
+	// Always send CORS headers
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
 	if( ! req.query.referrer ) return res.json( {status: 'error'} );
 
 	// Build the cache file name based on the md5 of the referrer.
