@@ -6,19 +6,19 @@
 	"env": {
 		"TWITTER_CONSUMER_KEY": {
 			"description": "The Consumer Key from your Twitter Application.",
-			"required": true,
+			"required": true
 		},
 		"TWITTER_CONSUMER_SECRET": {
 			"description": "The Consumer Secret from your Twitter Application.",
-			"required": true,
+			"required": true
 		},
 		"TWITTER_ACCESS_TOKEN_KEY": {
 			"description": "The OAuth Access Token Key generated within your Twitter Application.",
-			"required": true,
+			"required": true
 		},
 		"TWITTER_ACCESS_TOKEN_SECRET": {
 			"description": "The OAuth Access Token Secret generated within your Twitter Application.",
-			"required": true,
+			"required": true
 		}
 	}
 }
