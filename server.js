@@ -3,6 +3,11 @@
 // Load config from .env file.
 require('dotenv').config();
 
+if( !process.env.TWITTER_CONSUMER_KEY ) { console.error( 'Missing Environment Variable', 'TWITTER_CONSUMER_KEY' ); process.exit(); }
+if( !process.env.TWITTER_CONSUMER_SECRET ) { console.error( 'Missing Environment Variable', 'TWITTER_CONSUMER_SECRET' ); process.exit(); }
+if( !process.env.TWITTER_ACCESS_TOKEN_KEY ) { console.error( 'Missing Environment Variable:', 'TWITTER_ACCESS_TOKEN_KEY' ); process.exit(); }
+if( !process.env.TWITTER_ACCESS_TOKEN_SECRET ) { console.error( 'Missing Environment Variable', 'TWITTER_ACCESS_TOKEN_SECRET' ); process.exit(); }
+
 // Load dependencies.
 const fs = require('fs');
 const crypto = require('crypto');
@@ -80,4 +85,6 @@ app.get( '/lookup/', (req, res) => {
 } );
 
 // Start listening!
-app.listen( process.env.PORT );
+const port = (process.env.PORT) ? process.env.PORT : 80;
+console.info( '🐤 Twitlytics is listening on port ' + port );
+app.listen( port );
