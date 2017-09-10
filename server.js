@@ -5,7 +5,7 @@ require('dotenv').config();
 
 if( !process.env.TWITTER_CONSUMER_KEY ) { console.error( 'Missing Environment Variable', 'TWITTER_CONSUMER_KEY' ); process.exit(); }
 if( !process.env.TWITTER_CONSUMER_SECRET ) { console.error( 'Missing Environment Variable', 'TWITTER_CONSUMER_SECRET' ); process.exit(); }
-if( !process.env.TWITTER_ACCESS_TOKEN_KEY ) { console.error( 'Missing Environment Variable:', 'TWITTER_ACCESS_TOKEN_KEY' ); process.exit(); }
+if( !process.env.TWITTER_ACCESS_TOKEN_KEY ) { console.error( 'Missing Environment Variable', 'TWITTER_ACCESS_TOKEN_KEY' ); process.exit(); }
 if( !process.env.TWITTER_ACCESS_TOKEN_SECRET ) { console.error( 'Missing Environment Variable', 'TWITTER_ACCESS_TOKEN_SECRET' ); process.exit(); }
 
 // Load dependencies.
@@ -50,7 +50,7 @@ app.get( '/lookup/', (req, res) => {
 
 			// Do some sanity checking on Twitter's response.
 			if( error || !tweets ) return res.json( {status: 'error', error: 'twitter_error', message: error} );
-			if( tweets.statuses.length == 0 ) return res.json( {status: 'error', error: 'twitter_error'} );
+			if( tweets.statuses.length == 0 ) return res.json( {status: 'error', error: 'twitter_error', message: 'No tweets found.' } );
 
 			// Always look at the oldest tweet.
 			let tweet = tweets.statuses.slice(-1)[0];
