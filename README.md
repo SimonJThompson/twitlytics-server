@@ -12,6 +12,14 @@ Head over to [apps.twitter.com](https://apps.twitter.com/) and create a Twitter 
 
 Once created, go to "Keys and Access Tokens" and make a note of the Consumer Key (API Secret) and the Consumer Secret (API Secret). You'll also need to generate an Access Token and Access Token and secret.
 
+### (Required) Create a GitHub Access Token
+
+To allow it to run on platforms like Heroku with no persistent disk, twitlytics-server uses GitHub Gists for persistent storage.
+
+Create or login to your GitHub account, and head to your [Personal access tokens](https://github.com/settings/tokens). Generate a new token with a description of
+something like "twitlytics" and be sure to click the checkbox to enable the `gist` scope. Make a note of the key that's generated!
+
+
 ### (Option 1 - Easiest) Heroku
 
 The quickest way to get started is to use Heroku. Click the button below, and their UI will walk you through the setup and will prompt you for the Twitter details from the first step.

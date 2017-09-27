@@ -19,6 +19,10 @@
 		"TWITTER_ACCESS_TOKEN_SECRET": {
 			"description": "The OAuth Access Token Secret generated within your Twitter Application.",
 			"required": true
+		},
+		"GITHUB_ACCESS_TOKEN": {
+			"description": "The Personal Access Token generated within your GitHub Account.",
+			"required": true
 		}
 	}
 }
