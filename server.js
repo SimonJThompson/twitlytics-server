@@ -1,5 +1,9 @@
 'use strict';
 
+process.on( 'exit', function () { console.log('exit'); } );
+process.on( 'SIGINT', function() { console.log('sigint'); } );
+process.on( 'SIGTERM', function() { console.log('sigterm'); } );
+
 // Load config from .env file.
 require('dotenv').config();
 
