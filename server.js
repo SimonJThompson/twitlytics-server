@@ -80,6 +80,9 @@ app.get( '/lookup/', (req, res) => {
 
 			// Write to the cache.
 			cache.set( cacheKey, apiResponse.tweeter );
+			
+			// Trigger a manual cache push to ensure it's copied up.
+			cache.push();
 
 			// Send our response.
 			res.json( apiResponse );
