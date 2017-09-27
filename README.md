@@ -39,6 +39,7 @@ TWITTER_CONSUMER_KEY={YOUR_CONSUMER_KEY}
 TWITTER_CONSUMER_SECRET={YOUR_CONSUMER_SECRET}
 TWITTER_ACCESS_TOKEN_KEY={YOUR_ACCESS_TOKEN_KEY}
 TWITTER_ACCESS_TOKEN_SECRET={YOUR_ACCESS_TOKEN_SECRET}
+GITHUB_ACCESS_TOKEN={YOUR_GITHUB_ACCESS_TOKEN}
 ```
 
 4. Start the server with `npm start`. Ideally you'll want to use something like [Forever](https://github.com/foreverjs/forever) or [pm2](https://github.com/Unitech/pm2) to keep it running
