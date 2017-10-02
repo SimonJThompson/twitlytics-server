@@ -22,7 +22,7 @@ something like "twitlytics" and be sure to click the checkbox to enable the `gis
 
 ### (Option 1 - Easiest) Heroku
 
-The quickest way to get started is to use Heroku. Click the button below, and their UI will walk you through the setup and will prompt you for the Twitter details from the first step.
+The quickest way to get started is to use Heroku. Click the button below, and their UI will walk you through the setup and will prompt you for the Twitter and GitHub details from the previous steps.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SimonJThompson/twitlytics-server/tree/master)
 
