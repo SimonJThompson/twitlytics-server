@@ -41,7 +41,6 @@ app.get( '/lookup/', (req, res) => {
 	if( ! (req.query.referrer.indexOf( 't.co/' ) > -1) ) return res.json( {status: 'error'} ); // TODO: Better validation.
 
 	let twitterShortlink = req.query.referrer.split( 't.co/' )[1];
-	twitterShortlink = twitterShortlink.split('?')[0];
 
 	let cacheKey = crypto.createHash( 'md5' ).update( twitterShortlink ).digest( 'hex' ).toString();
 
@@ -57,7 +56,7 @@ app.get( '/lookup/', (req, res) => {
 		} );
 	}else {
 
-		twitterClient.get( 'search/tweets', {q: req.query.referrer}, function(error, tweets, resp) {
+		twitterClient.get( 'search/tweets', {q: req.query.referrer.split('?')[0]}, function(error, tweets, resp) {
 
 			// Do some sanity checking on Twitter's response.
 			if( error || !tweets ) return res.json( {status: 'error', error: 'twitter_error', message: error} );
