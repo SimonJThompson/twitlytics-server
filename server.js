@@ -41,6 +41,8 @@ app.get( '/lookup/', (req, res) => {
 	if( ! (req.query.referrer.indexOf( 't.co/' ) > -1) ) return res.json( {status: 'error'} ); // TODO: Better validation.
 
 	let twitterShortlink = req.query.referrer.split( 't.co/' )[1];
+	twitterShortlink = twitterShortlink.split('?')[0];
+
 	let cacheKey = crypto.createHash( 'md5' ).update( twitterShortlink ).digest( 'hex' ).toString();
 
 	// Check if we have data for this referrer cached already.
